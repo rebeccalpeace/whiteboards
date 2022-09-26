@@ -68,4 +68,17 @@
 # Time complexity is O(4n) amounts to O(n) 
 
 
+def moveZeroes(nums):
+    for i in range(len(nums)):
+        if nums[i] == 0:
+            nums.append(0)
+            nums.remove(nums[i])
+            i -= 1
+        else:
+            continue
+    return nums
+                
+
+print(moveZeroes([0, 1, 0, 3, 12]))
+
 
