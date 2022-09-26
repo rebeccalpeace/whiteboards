@@ -68,17 +68,31 @@
 # Time complexity is O(4n) amounts to O(n) 
 
 
-def moveZeroes(nums):
-    for i in range(len(nums)):
-        if nums[i] == 0:
-            nums.append(0)
-            nums.remove(nums[i])
-            i -= 1
-        else:
-            continue
-    return nums
+# def moveZeroes(nums):
+#     for i in range(len(nums)):
+#         if nums[i] == 0:
+#             nums.append(0)
+#             nums.remove(nums[i])
+#             i -= 1
+#         else:
+#             continue
+#     return nums
                 
 
-print(moveZeroes([0, 1, 0, 3, 12]))
+# print(moveZeroes([0, 1, 0, 3, 12]))
+
+
+
+def plusOne(digits):
+        num = ""
+        for i in digits:
+            num += str(i)
+        new_num = int(num) + 1
+        print(new_num)
+        new_list = [int(num) for num in str(new_num)]
+        print(new_list)
+        return new_list
+
+print(plusOne([9, 9]))
 
 
