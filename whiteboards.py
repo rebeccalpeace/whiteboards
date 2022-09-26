@@ -83,16 +83,36 @@
 
 
 
-def plusOne(digits):
-        num = ""
-        for i in digits:
-            num += str(i)
-        new_num = int(num) + 1
-        print(new_num)
-        new_list = [int(num) for num in str(new_num)]
-        print(new_list)
-        return new_list
+# def plusOne(digits):
+#         num = ""
+#         for i in digits:
+#             num += str(i)
+#         new_num = int(num) + 1
+#         print(new_num)
+#         new_list = [int(num) for num in str(new_num)]
+#         print(new_list)
+#         return new_list
 
-print(plusOne([9, 9]))
+# print(plusOne([9, 9]))
 
 
+
+
+# given an array of integers sorted in non-decreasing order, find the starting and ending position of a given target value. if target not found in the array, return [-1, -1]
+
+# ex:
+# Input: nums = [5,7,7,8,8,10], target = 8
+# Output: [3,4]
+
+# def start_end(list1, target):
+#     indices = []
+#     for i in range(len(list1)):
+#         if list1[i] == target:
+#             indices.append(i)
+#     if indices == []:
+#         return [-1, -1]
+#     else:
+#         return indices
+
+
+# print(start_end([], 0))
