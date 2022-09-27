@@ -116,3 +116,43 @@
 
 
 # print(start_end([], 0))
+
+
+
+# def anagrams(test, words):
+#     matches = []
+#     for word in words:
+#         if sorted(word) == sorted(test):
+#             matches.append(word)
+#     return matches
+
+# print(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
+
+
+
+# def valid_parentheses(string):
+#     left = 0
+#     right = 0
+#     if string == "":
+#         return True
+#     if string[0] == ")" or string[-1] == "(":
+#         return False
+#     if string.count('(') != string.count(')'):
+#         return False
+#     for i in range(len(string)):
+#         if string[i] == "(":
+#             left += 1
+#         elif string[i] == ")":
+#             right += 1
+#         if right > left:
+#             return False
+#     return True
+
+
+# print(valid_parentheses("()test()"))
+
+
+
+
+
+
