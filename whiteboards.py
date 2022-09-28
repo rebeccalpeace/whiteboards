@@ -164,17 +164,112 @@
 # Return true if the student is eligible for an attendance award, or false otherwise.
 
 # s = "PPALLP"
-s = "PPALLL"
+# s = "PPALLL"
 
-def award(str1):
-    for i in range(len(str1)):
-        if str1[i] == 'L':
-            if str1[i+1] == 'L' and str1[i+2] == 'L':
-                return False
-    if str1.count('A') < 2:
-        return True
-    return False
+# def award(str1):
+#     for i in range(len(str1)):
+#         if str1[i] == 'L':
+#             if str1[i+1] == 'L' and str1[i+2] == 'L':
+#                 return False
+#     if str1.count('A') < 2:
+#         return True
+#     return False
 
 
-print(award(s))
+# print(award(s))
 
+# rec = {"flour": 500, "sugar": 200, "eggs": 1}
+# avail = {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200}
+
+# # rec = {"apples": 3, "flour": 300, "sugar": 150, "milk": 100, "oil": 100}
+# # avail = {"sugar": 500, "flour": 2000, "milk": 2000}
+
+# def cakes(recipe, available):
+#     cake_count = []
+#     for key, value in recipe.items():
+#         if key not in available.keys():
+#             return 0
+#     for key, value in recipe.items():
+#         print(key)
+#         print(available[key], recipe[key])
+#         cake_count.append(available[key] // recipe[key])
+#     print(cake_count)
+#     return min(cake_count)
+
+# print(cakes(rec, avail))
+
+
+
+# A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+# Given a string s, return true if it is a palindrome, or false otherwise.
+
+ 
+
+# Example 1:
+
+# Input: s = "A man, a plan, a canal: Panama"
+# Output: true
+# Explanation: "amanaplanacanalpanama" is a palindrome.
+# Example 2:
+
+# Input: s = "race a car"
+# Output: false
+# Explanation: "raceacar" is not a palindrome.
+# Example 3:
+
+# Input: s = " "
+# Output: true
+# Explanation: s is an empty string "" after removing non-alphanumeric characters.
+# Since an empty string reads the same forward and backward, it is a palindrome.
+
+# def is_palindrome(str1):
+#     # while loop and .remove to remove non alphanumeric
+#     # use .lower()
+#     # check original string against the reverse str1[::-1]
+#     str2 = ""
+#     for i in str1:
+#         if i.isalnum() is True:
+#             str2 += i 
+#     lowered = str2.lower()
+#     print(lowered)
+#     if lowered == lowered[::-1]:
+#         return True
+#     return False
+
+# print(is_palindrome("race a car"))
+
+# 9/28/22
+
+# You are given an integer array score of size n, where score[i] is the score of the ith athlete in a competition. All the scores are guaranteed to be unique.
+# The athletes are placed based on their scores, where the 1st place athlete has the highest score, the 2nd place athlete has the 2nd highest score, and so on. The placement of each athlete determines their rank:
+# The 1st place athlete's rank is "Gold Medal".
+# The 2nd place athlete's rank is "Silver Medal".
+# The 3rd place athlete's rank is "Bronze Medal".
+# For the 4th place to the nth place athlete, their rank is their placement number (i.e., the xth place athlete's rank is "x").
+# Return an array answer of size n where answer[i] is the rank of the ithathlete.
+
+# Example 1:
+# Input: score = [5,4,3,2,1]
+# Output: ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
+# Explanation: The placements are [1st, 2nd, 3rd, 4th, 5th].
+# Example 2:
+# Input: score = [10,3,8,9,4]
+# Output: ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
+# Explanation: The placements are [1st, 5th, 3rd, 2nd, 4th].
+
+# def placements(arr1):
+#     sort_arr = sorted(arr1, reverse=True)
+#     for i in range(len(arr1)):
+#         if arr1[i] == sort_arr[0]:
+#             arr1[i] = "Gold Medal"
+#         elif arr1[i] == sort_arr[1]:
+#             arr1[i] = "Silver Medal"
+#         elif arr1[i] == sort_arr[2]:
+#             arr1[i] = "Bronze Medal"
+#         else:
+#             arr1[i] = str(sort_arr.index(arr1[i])+1)
+#     return arr1
+
+
+# print(placements([5, 4, 3, 2, 1, 6]))
