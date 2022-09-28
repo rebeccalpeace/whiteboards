@@ -273,3 +273,30 @@
 
 
 # print(placements([5, 4, 3, 2, 1, 6]))
+
+
+# You are given an array of words. Your task is to check if a permutation of each word has occurred earlier in the list -- if so, remove that word from the array, if not, keep it in the array. NOTE: A permutation is a word of the same length with the same characters -- they can be in any order (ie. "code" and "ocde")
+
+# Example:
+# words = ['code','doce','framer','frame','ocde']
+# Output: ['code','framer','frame']
+# Explained:
+# 'code' is the first element in the array, not preceded by any permutations, so keep it
+# 'doce' is a permutation of 'code', so remove it
+
+# def isPerm(arr1):
+#     # loop through array
+#     # for each word, sort it, check if sorted word in already kept words array
+#     # if so, continue, if not, add to final arr
+#     kept = []
+#     final = []
+#     for i in arr1:
+#         if ''.join(sorted(i)) in kept:
+#             continue
+#         else:
+#             kept.append(''.join(sorted(i)))
+#             final.append(i)
+#     return final
+
+    
+# print(isPerm(['code','doce','framer','frame','ocde']))
