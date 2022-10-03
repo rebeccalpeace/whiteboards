@@ -300,3 +300,83 @@
 
     
 # print(isPerm(['code','doce','framer','frame','ocde']))
+
+
+# def reverse_words(str1):
+#     reversed_word = []
+#     words_list = [i for i in str1.split()]
+#     print(words_list)
+#     for i in words_list:
+#         i = i[::-1]
+#         print(i)
+#         reversed_word.append(i)
+#     return reversed_word
+
+# print(reverse_words("reverse these words"))
+
+
+# def maxPoints(points):
+#         if len(points) < 2:
+#             return len(points)
+#         sort_points = sorted(points, key=lambda x: x[0])
+#         print(sort_points)
+#         clean_x = []
+#         final_points = []
+#         x_diff = []
+#         y_diff = []
+#         x_step = 0
+#         for i in range(len(sort_points)-1):
+#             x_diff.append(sort_points[i][0]-sort_points[i+1][0])
+#         print(x_diff)
+#         for i in x_diff:
+#             if x_diff.count(i) > x_step:
+#                 x_step = i
+#         print(x_step)
+#         for i in range(len(sort_points)-1):
+#             if sort_points[i][0]-sort_points[i+1][0] == x_step:
+#                 clean_x.append(sort_points[i])
+#         if sort_points[-2][0]-sort_points[-1][0] == x_step:
+#             clean_x.append(sort_points[-1])
+#         y_step = 0
+#         for i in range(len(clean_x)-1):
+#             y_diff.append(clean_x[i][1]-clean_x[i+1][1])
+#         print(y_diff)
+#         for i in y_diff:
+#             if y_diff.count(i) > y_step:
+#                 y_step = i
+#         print(y_step)
+#         i = 0
+#         while i < len(clean_x)-1:
+#             if clean_x[i][1]-clean_x[i+1][1] == y_step:
+#                 final_points.append(clean_x[i])
+#                 i += 1
+#             else:
+#                 final_points.append(clean_x[i])
+#                 i +=2
+#         if clean_x[-2][1]-clean_x[-1][1] == y_step:
+#             final_points.append(clean_x[-1])
+#         return len(final_points)
+
+# print(maxPoints([[0,0],[2,2],[-1,-1]]))
+
+
+
+# You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
+# Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+# Example 1:
+# Input: jewels = "aA", stones = "aAAbbbb"
+# Output: 3
+# Example 2:
+# Input: jewels = "z", stones = "ZZ"
+# Output: 0
+
+# def stones_to_jewels(jwls, stns):
+#     count = 0
+#     for i in stns:
+#         if i in jwls:
+#             count += 1
+#     return count
+
+
+# print(stones_to_jewels("z", "ZZ"))
