@@ -397,26 +397,54 @@
 # Input: n = 1
 # Output: [0]
 
-def sum_zero(n):
-    final = []
-    if n == 1:
-        return [0]
-    if n == 3:
-        return [-1, 0, 1]
-    if n == 5:
-        return [-1, 1, 0, -2, 2]
-    if n % 2 == 0:
-        for i in range(1, int(n/2 + 1)):
-            final.append(0-i)
-            final.append(0+i)
-    else:
-        for i in range(1, int((n-3)/2)+1):
-            final.append(0-i)
-            final.append(0+i)
-        final.append(0-n)
-        final.append(n//2)
-        final.append((n//2)+1)
+# def sum_zero(n):
+#     final = []
+#     if n == 1:
+#         return [0]
+#     if n == 3:
+#         return [-1, 0, 1]
+#     if n == 5:
+#         return [-1, 1, 0, -2, 2]
+#     if n % 2 == 0:
+#         for i in range(1, int(n/2 + 1)):
+#             final.append(0-i)
+#             final.append(0+i)
+#     else:
+#         for i in range(1, int((n-3)/2)+1):
+#             final.append(0-i)
+#             final.append(0+i)
+#         final.append(0-n)
+#         final.append(n//2)
+#         final.append((n//2)+1)
 
-    return final, sum(final)
+#     return final, sum(final)
 
-print(sum_zero(1))
+# print(sum_zero(1))
+
+
+# 10/13/22
+
+# Given an array of integers arr, return true if the number of occurrences of each value in the array is unique, or false otherwise.
+# Example 1:
+# Input: arr = [1,2,2,1,1,3]
+# Output: true
+# Explanation: The value 1 has 3 occurrences, 2 has 2 and 3 has 1. No two values have the same number of occurrences.
+# Example 2:
+# Input: arr = [1,2]
+# Output: false
+# Example 3:
+# Input: arr = [-3,0,1,-3,1,1,1,-3,10,0]
+# Output: true
+
+def unique(arr1):
+    counts = []
+    setarr1 = set(arr1)
+    for i in setarr1:
+        if arr1.count(i) in counts:
+            return False
+        else:
+            counts.append(arr1.count(i))
+    return True
+
+print(unique([-3,0,1,-3,1,1,1,-3,10,0]))
+
